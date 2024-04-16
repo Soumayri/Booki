@@ -2,7 +2,8 @@
 * {
   font-family: "Raleway", sans-serif;
 }
-p {
+p,
+a {
   font-size: 0.8em;
 }
 
@@ -30,38 +31,43 @@ header {
   justify-content: space-around;
   align-items: center;
 }
-.liens-navigation {
+nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 20%;
 }
-.lien-hebergement {
+nav li {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+}
+.hebergementLinks {
+  display: flex;
   align-items: center;
-  border-top: 3px #0065fc solid;
+  width: 7em;
+  height: 3em;
+}
+.active {
+  border-top: 1px #0065fc solid;
   color: #0065fc;
-  width: 7em;
-  height: 3em;
+  padding: 15px 0 15px 0;
 }
-.lien-activites {
+.activityLinks {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  border-top: 3px white solid;
   width: 7em;
   height: 3em;
 }
+
 /******SectionRecherche*****/
-.recherche {
+.search {
   padding: 20px 0 20px 0;
 }
 h1 {
   margin-bottom: -0.3em;
 }
 
-.Barre-de-recherche {
+.searchBar {
   display: flex;
   align-items: center;
   border: none;
@@ -80,17 +86,18 @@ h1 {
   background-color: #f2f2f2;
   border-radius: 10px 0 0 10px;
 }
-.texte-recherche {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  color: black;
-  height: 50px;
-  padding-left: 1em;
-  border: none;
+.searchTxt {
   border-top: #f2f2f2 1px solid;
   border-bottom: #f2f2f2 1px solid;
+  padding: 13px 0 16px 0;
+}
+::placeholder {
+  color: black;
+  font-weight: bold;
+  padding-left: 1em;
+}
+#inputsearch {
+  border: none;
 }
 #btn-rechercher {
   display: flex;
@@ -121,7 +128,8 @@ h3 {
 
 .fltre-eco {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   width: 20%;
   border: #f2f2f2 2px solid;
   border-radius: 25px;
@@ -131,7 +139,8 @@ h3 {
 }
 .fltre-familial {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   width: 20%;
   border: #f2f2f2 2px solid;
   border-radius: 25px;
@@ -141,7 +150,8 @@ h3 {
 }
 .fltre-romantique {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   width: 20%;
   border: #f2f2f2 2px solid;
   border-radius: 25px;
@@ -151,8 +161,8 @@ h3 {
 }
 .fltre-pepite {
   display: flex;
-  justify-content: center;
-
+  justify-content: space-evenly;
+  align-items: center;
   width: 20%;
   border: #f2f2f2 2px solid;
   border-radius: 25px;
@@ -223,7 +233,40 @@ a {
 .hebergements {
   width: 65%;
 }
-
+.hebergements h2 {
+  margin-top: 0;
+}
+.hebergements-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.hebergements-cards .card {
+  width: 30%;
+  background-color: white;
+  border-radius: 15% 15% 15% 15%;
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.1);
+}
+.hebergements-cards .card img {
+  width: 100%;
+  height: 150px;
+  align-items: center;
+  object-fit: cover;
+  border-radius: 20% 20% 0 0;
+}
+.hebergements-cards .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+.showMore {
+  padding-top: 1em;
+}
 /****** Populaires ***********/
 .populaires {
   width: 32%;
@@ -267,6 +310,53 @@ a {
 
 .populaires-cards .card-rating {
   margin-bottom: 5px;
+}
+/* Activites */
+.activites {
+  margin-top: 2em;
+}
+.activites h2 {
+  margin: 2em 0 2em 0;
+}
+.activityCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2em;
+  width: 100%;
+}
+.activityCards .Card {
+  width: 100%;
+  border-radius: 5% 5% 5% 5%;
+  background-color: white;
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.1);
+}
+.activityCards img {
+  width: 100%;
+  height: 400px;
+  border-radius: 5% 5% 0 0;
+  object-fit: cover;
+}
+.activityCards .Activity-Title {
+  padding-left: 1em;
+}
+/* footer */
+
+footer {
+  margin: 5em 0 0 0;
+  padding-left: 2em;
+  width: 100%;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  gap: 20em;
+}
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
